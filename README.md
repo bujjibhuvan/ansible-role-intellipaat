@@ -3,12 +3,13 @@ Role Name : intellipaat
 
 Intellipaat devops assignment automation with ansible.
 
-[![Build Status](https://travis-ci.org/hemanth22/ansible-role-jenkins.svg?branch=master)](https://travis-ci.org/hemanth22/ansible-role-jenkins)
+[![Build Status](https://travis-ci.org/hemanth22/ansible-role-intellipaat.svg?branch=master)](https://travis-ci.org/hemanth22/ansible-role-intellipaat)
+
 Jenkins info:
 
 default Username: admin  
 default Password: admin  
-default Port: 80
+default Port: 8080
 
 Requirements
 ------------

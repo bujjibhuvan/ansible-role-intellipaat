@@ -22,16 +22,10 @@
       ansible-galaxy install geerlingguy.jenkins
       ansible-galaxy install geerlingguy.puppet
       ansible-galaxy install hemanth22.createuser
-      # download and install nginx
-      wget -O nginx.yaml https://gist.github.com/hemanth22/d3b7fd2693c5d2d44804d420f79bfb18/raw
-      ansible-playbook nginx.yaml
       # download jenkins conf and install jenkins
       wget -O jenkinscnf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/d476d4ea3fb7ca3dbf8469a20e5c6e42e03a1ba4/jenkinsconf.yaml
       ansible-playbook jenkinscnf.yaml
       ansible-playbook /root/.ansible/roles/geerlingguy.jenkins/molecule/default/playbook.yml
-      # reverse proxy from 8080 to 80
-      wget -O jenkins_nginx_config.yaml https://gist.github.com/hemanth22/0b7d71fe3fab06bf2dbb5536f3f2013e/raw
-      ansible-playbook jenkins_nginx_config.yaml
       # create centos passwd
       ansible-playbook /root/.ansible/roles/hemanth22.createuser/tests/test.yml
       # download and create passwd for root
@@ -55,6 +49,12 @@
       cp puppet.conf /etc/puppetlabs/puppet/puppet.conf
       # CA Setup
       /opt/puppetlabs/bin/puppetserver ca setup
+      yum install pdk -y
+      echo 'PATH=/opt/puppetlabs/bin:$PATH' >> /root/.bashrc
+      source /root/.bashrc
+      systemctl enable puppetserver
+      systemctl start puppetserver
+      systemctl status -l puppetserver
     wait: true
     wait_timeout: 500
     instance_tags:
