@@ -5,11 +5,11 @@ Intellipaat devops assignment automation with ansible.
 
 [![Build Status](https://travis-ci.org/hemanth22/ansible-role-intellipaat.svg?branch=master)](https://travis-ci.org/hemanth22/ansible-role-intellipaat)
 
-Jenkins info:
+__Jenkins info:__
 
-default Username: admin  
-default Password: admin  
-default Port: 8080
+__default Username:__ admin  
+__default Password:__ admin  
+__default Port:__ 8080
 
 Requirements
 ------------
