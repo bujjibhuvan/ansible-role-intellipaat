@@ -26,8 +26,6 @@
       wget -O jenkinscnf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/d476d4ea3fb7ca3dbf8469a20e5c6e42e03a1ba4/jenkinsconf.yaml
       ansible-playbook jenkinscnf.yaml
       ansible-playbook /root/.ansible/roles/geerlingguy.jenkins/molecule/default/playbook.yml
-      # create centos passwd
-      ansible-playbook /root/.ansible/roles/hemanth22.createuser/tests/test.yml
       # download and create passwd for root
       wget -O rootuser.yaml https://gist.github.com/hemanth22/c0cdbbbd837b562628cc6796f831da16/raw
       ansible-playbook rootuser.yaml
@@ -55,7 +53,7 @@
     wait: true
     wait_timeout: 500
     instance_tags:
-      Name: Jenkins
+      Name: Master
       Environment: Production
     region: "{{ region }}"
     volumes:
@@ -90,8 +88,6 @@
       ansible-galaxy install geerlingguy.jenkins
       ansible-galaxy install geerlingguy.puppet
       ansible-galaxy install hemanth22.createuser
-      # create centos passwd
-      ansible-playbook /root/.ansible/roles/hemanth22.createuser/tests/test.yml
       # download and create passwd for root
       wget -O rootuser.yaml https://gist.github.com/hemanth22/c0cdbbbd837b562628cc6796f831da16/raw
       ansible-playbook rootuser.yaml
@@ -114,7 +110,6 @@
       usermod -a -G docker centos
       systemctl restart docker
       systemctl status -l docker
-      systemctl daemon-reload
     wait: true
     wait_timeout: 500
     instance_tags:
@@ -153,8 +148,6 @@
       ansible-galaxy install geerlingguy.jenkins
       ansible-galaxy install geerlingguy.puppet
       ansible-galaxy install hemanth22.createuser
-      # create centos passwd
-      ansible-playbook /root/.ansible/roles/hemanth22.createuser/tests/test.yml
       # download and create passwd for root
       wget -O rootuser.yaml https://gist.github.com/hemanth22/c0cdbbbd837b562628cc6796f831da16/raw
       ansible-playbook rootuser.yaml
@@ -177,7 +170,6 @@
       usermod -a -G docker centos
       systemctl restart docker
       systemctl status -l docker
-      systemctl daemon-reload
     wait: true
     wait_timeout: 500
     instance_tags:
