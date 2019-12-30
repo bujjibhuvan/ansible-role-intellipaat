@@ -52,9 +52,6 @@
       yum install pdk -y
       echo 'PATH=/opt/puppetlabs/bin:$PATH' >> /root/.bashrc
       source /root/.bashrc
-      systemctl enable puppetserver
-      systemctl start puppetserver
-      systemctl status -l puppetserver
     wait: true
     wait_timeout: 500
     instance_tags:
