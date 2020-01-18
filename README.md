@@ -24,7 +24,7 @@ Try exploring defaults/main.yml in the github to understand which variables can 
 Dependencies
 ------------
 
-No Dependencies
+No Dependencies. 
 
 Example Playbook
 ----------------
