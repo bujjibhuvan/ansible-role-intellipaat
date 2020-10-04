@@ -6,10 +6,11 @@
   vars:
     keypair: hemanth
     instance_type: t2.micro
-    security_group: sg-0fa454335a1f75b19
+    security_group: sg-090c080efee992a15
     volume_size: 10
     region: us-west-2
     ec2_access_key: "{{ lookup('env', 'ANSIBLE_KEY') }}"
     ec2_secret_key: "{{ lookup('env', 'ANSIBLE_VAL') }}"
   roles:
-    - hemanth22.intellipaat
+    - role: hemanth22.intellipaat
+      tags: molecule-idempotence-notest
