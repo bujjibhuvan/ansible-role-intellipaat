@@ -23,9 +23,9 @@
       ansible-galaxy install geerlingguy.puppet
       ansible-galaxy install hemanth22.createuser
       # download jenkins conf and install jenkins
-      wget -O jenkinscnf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/d476d4ea3fb7ca3dbf8469a20e5c6e42e03a1ba4/jenkinsconf.yaml
+      wget -O jenkinscnf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/5bf1cd0c0ab56305cd8489eabd5fd2b2299697c7/jenkinsconf.yaml
       ansible-playbook jenkinscnf.yaml
-      ansible-playbook /root/.ansible/roles/geerlingguy.jenkins/molecule/default/playbook.yml
+      ansible-playbook /root/.ansible/roles/geerlingguy.jenkins/molecule/default/converge.yml
       # download and create passwd for root
       wget -O rootuser.yaml https://gist.github.com/hemanth22/c0cdbbbd837b562628cc6796f831da16/raw
       ansible-playbook rootuser.yaml
@@ -35,7 +35,7 @@
       # configure domain name and ip address
       echo `hostname -I`  puppet >> /etc/hosts
       # download and install puppetconf
-      wget -O puppetconf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/d476d4ea3fb7ca3dbf8469a20e5c6e42e03a1ba4/puppetconf.yaml
+      wget -O puppetconf.yaml https://gist.githubusercontent.com/hemanth22/867610b7a9e50781181d89bca95b79ca/raw/48b9f60718ed16664c5d326c355c2ac89761fa93/puppetconf.yaml
       ansible-playbook puppetconf.yaml
       ansible-playbook /root/.ansible/roles/geerlingguy.puppet/molecule/default/playbook.yml
       # download and install puppet memory configuration
