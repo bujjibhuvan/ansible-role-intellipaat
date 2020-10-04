@@ -62,7 +62,7 @@
         volume_type: gp2
         volume_size: "{{ volume_size }}"
         delete_on_termination: true
-    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    vpc_subnet_id: "{{ vpc_subnet_zone1_id }}"
     assign_public_ip: true
   register: ec2
 
@@ -126,7 +126,7 @@
         volume_type: gp2
         volume_size: "{{ volume_size }}"
         delete_on_termination: true
-    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    vpc_subnet_id: "{{ vpc_subnet_zone2_id }}"
     assign_public_ip: true
   register: ec2
 
@@ -190,7 +190,7 @@
         volume_type: gp2
         volume_size: "{{ volume_size }}"
         delete_on_termination: true
-    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    vpc_subnet_id: "{{ vpc_subnet_zone3_id }}"
     assign_public_ip: true
   register: ec2
 
