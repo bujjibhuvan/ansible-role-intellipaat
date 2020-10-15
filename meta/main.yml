@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: intellipaat
-  author: hemanth22
+  author: bujjibhuvan
   description: Intellipaat devops assignment automation with ansible.
   license: MIT / BSD
   min_ansible_version: 2.9
