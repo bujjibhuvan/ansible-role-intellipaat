@@ -5,6 +5,7 @@ driver:
   name: docker
 lint: |
   set -e
+  pip3 install molecule-docker
   yamllint .
   ansible-lint
 platforms:
