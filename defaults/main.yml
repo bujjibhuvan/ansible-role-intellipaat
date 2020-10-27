@@ -2,12 +2,12 @@
 # defaults file for jenkins
 keypair: cap2020
 instance_type: t2.micro
-security_group: sg-01d69b1aa93dce2d6
+security_group: sg-02728b7364aa7627c
 image: ami-01ed306a12b7d1c96
-vpc_subnet_zone1_id: subnet-172b834a
-vpc_subnet_zone2_id: subnet-172b834a
-vpc_subnet_zone3_id: subnet-172b834a
-vpc_subnet_zone4_id: subnet-172b834a
+vpc_subnet_zone1_id: subnet-02e6980fb7c7e0ad1
+vpc_subnet_zone2_id: subnet-0332444c7cbcfc7a7
+vpc_subnet_zone3_id: subnet-0466d8a2be598c46b
+vpc_subnet_zone4_id: subnet-09f9358b8e3f24a54
 volume_size: 10
 region: us-west-2
 ec2_access_key: ABCDF
