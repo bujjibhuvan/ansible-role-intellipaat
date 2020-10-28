@@ -1,5 +1,5 @@
 ---
-language: python
+language: python3
 services: docker
 sudo: required
 
@@ -10,7 +10,7 @@ env:
     - MOLECULE_DISTRO: centos7
 
 install:
-  - pip install molecule yamllint ansible-lint docker
+  - pip3 install molecule yamllint ansible-lint molecule-docker
 
 before_script:
   - cd ../
