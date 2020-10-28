@@ -1,7 +1,7 @@
 Role Name : intellipaat
 =========
 
-Intellipaat devops assignment automation with ansible.
+Intellipaat devops assignment automation with ansible
 
 [![Build Status](https://travis-ci.org/hemanth22/ansible-role-intellipaat.svg?branch=master)](https://travis-ci.org/hemanth22/ansible-role-intellipaat)
 
